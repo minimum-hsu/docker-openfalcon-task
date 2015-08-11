@@ -14,7 +14,7 @@
     },
     "monitor" : {
         "enabled": true,
-        "mailUrl" : "http://tycloudstart.com:1986/mail/sender",
+        "mailUrl" : "http://127.0.0.1:9000/mail",
         "mailTos" : "minimum@cepave.com",
         "cluster" : [
             "transfer,127.0.0.1:6060/health",
