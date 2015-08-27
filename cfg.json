@@ -1,28 +1,20 @@
 {
     "debug": false,
     "http": {
-        "enabled": true,
-        "listen": "0.0.0.0:8001"
+        "enable": true,
+        "listen": "0.0.0.0:8002"
     },
     "index": {
-        "enabled": true,
+        "enable": false,
         "dsn": "root:@tcp(127.0.0.1:3306)/graph?loc=Local&parseTime=true",
         "maxIdle": 4,
-        "cluster":[
-            "127.0.0.1:6071"
-            ]
+        "autoDelete": false,
+        "cluster":{
+            "127.0.0.1:6071" : "0 0 0 ? * 0-5"
+        }
     },
-    "monitor" : {
-        "enabled": true,
-        "mailUrl" : "http://127.0.0.1:9000/mail",
-        "mailTos" : "minimum@cepave.com",
-        "cluster" : [
-            "transfer,127.0.0.1:6060/health",
-            "graph,127.0.0.1:6071/health"
-        ]
-    },
-    "collector":{
-        "enabled": true,
+    "collector" : {
+        "enable": true,
         "destUrl" : "http://127.0.0.1:1988/v1/push",
         "srcUrlFmt" : "http://%s/statistics/all",
         "cluster" : [
