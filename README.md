@@ -15,7 +15,7 @@ $sudo docker build --force-rm=true -t openfalcon-task .
 Use default mysql account, configuration, and falcon-task package.
 
 ```
-$sudo docker run -dti --name task -p 8001:8001 openfalcon-task
+$sudo docker run -dti --name task -p 8002:8002 openfalcon-task
 ```
 
 ### Advanced Run
@@ -32,5 +32,5 @@ $sudo docker run -dti --name task -p 8001:8001 openfalcon-task
 For example, **cfg.json** in /tmp/config and **falcon-task.tar.gz** in /tmp/pack,
 
 ```
-$sudo docker run -dti --name task -v /tmp/pack:/package -v /tmp/config/cfg.json:/config/cfg.json -p 8001:8001 openfalcon-task
+$sudo docker run -dti --name task -v /tmp/pack:/package -v /tmp/config/cfg.json:/config/cfg.json -p 8002:8002 openfalcon-task
 ```
