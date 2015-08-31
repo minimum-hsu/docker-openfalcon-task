@@ -5,10 +5,10 @@
         "listen": "0.0.0.0:8002"
     },
     "index": {
-        "enable": false,
+        "enable": true,
         "dsn": "root:@tcp(127.0.0.1:3306)/graph?loc=Local&parseTime=true",
         "maxIdle": 4,
-        "autoDelete": false,
+        "autoDelete": true,
         "cluster":{
             "127.0.0.1:6071" : "0 0 0 ? * 0-5"
         }
